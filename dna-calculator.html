@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Dilution Calculator</title>
+    <link rel="stylesheet" href="dna-calculator.css">
+</head>
+<body>
+    <h2>DNA Dilution Calculator with Graphical Display</h2>
+
+    <!-- Input Fields for Concentration and Volume -->
+    <label for="initialConcentration">Current DNA concentration:</label>
+    <input type="number" id="initialConcentration" placeholder="e.g., 50"><br>
+
+    <label for="initialUnit">Unit:</label>
+    <select id="initialUnit">
+        <option value="ng/µL">ng/µL</option>
+        <option value="µg/mL">µg/mL</option>
+        <option value="mg/mL">mg/mL</option>
+    </select><br>
+
+    <label for="targetConcentration">Target DNA concentration:</label>
+    <input type="number" id="targetConcentration" placeholder="e.g., 10"><br>
+
+    <label for="targetUnit">Unit:</label>
+    <select id="targetUnit">
+        <option value="ng/µL">ng/µL</option>
+        <option value="µg/mL">µg/mL</option>
+        <option value="mg/mL">mg/mL</option>
+    </select><br>
+
+    <label for="finalVolume">Total volume required (µL):</label>
+    <input type="number" id="finalVolume" placeholder="e.g., 100"><br>
+
+    <label for="dilutionSteps">Choose dilution type:</label>
+    <select id="dilutionSteps">
+        <option value="1">One-Step Dilution</option>
+        <option value="2">Two-Step Dilution</option>
+    </select><br>
+
+    <button onclick="calculateDilution()">Calculate Dilution</button>
+
+    <!-- Output Section -->
+    <p id="output"></p>
+
+    <!-- Canvas for Graphical Display -->
+    <canvas id="dilutionCanvas" width="400" height="300"></canvas>
+
+    <script src="dna-calculator.js"></script>
+</body>
+</html>
